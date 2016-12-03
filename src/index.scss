@@ -1,0 +1,89 @@
+.header {
+  color: black !important;
+  font-weight: 900;
+  background-color: blue;
+}
+
+.derp.ng-enter {
+  -webkit-transition: 1s linear all; /* Chrome */
+  transition: 2s linear all;
+  background-color: #0f0;
+  opacity: 0;
+  /* width: 10%; */
+  left: 100%;
+}
+
+.derp.ng-enter-active {
+  background-color: #ff0;
+  opacity: 1;
+  width: 100%;
+  left: 0;
+  /* -webkit-transform:rotate(360deg);
+  -moz-transform:rotate(360deg);
+  -o-transform:rotate(360deg);
+  -ms-transform:rotate(360deg);
+  transform:rotate(360deg); */
+}
+
+.gucci {
+  display: block;
+  position: absolute;
+}
+
+/* After the transition this will be the only class remaining */
+.fadein {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  opacity: 1; /* Default value but added for clarity */
+}
+
+/* Initial state when showing */
+.fadein.ng-hide-remove {
+  opacity: 0;
+  display: block !important;
+}
+
+/* Will transition towards this state */
+.fadein.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+
+.derp {
+  background-color: yellow;
+}
+
+
+.my-repeat-animation.ng-enter,
+.my-repeat-animation.ng-leave,
+.my-repeat-animation.ng-move {
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  position:relative;
+}
+
+.my-repeat-animation.ng-enter {
+  left:100%;
+  opacity:0;
+}
+.my-repeat-animation.ng-enter.ng-enter-active {
+  left:0;
+  opacity:1;
+}
+
+.my-repeat-animation.ng-leave {
+  left:0;
+  opacity:1;
+}
+.my-repeat-animation.ng-leave.ng-leave-active {
+  left:100%;
+  opacity:0;
+}
+
+.my-repeat-animation.ng-move {
+  opacity:0.5;
+}
+.my-repeat-animation.ng-move.ng-move-active {
+  opacity:1;
+}
